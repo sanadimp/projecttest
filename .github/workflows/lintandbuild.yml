@@ -23,7 +23,7 @@ jobs:
           with:
             node-version: 21
         - name: Run Tests
-          run: npm run tests
+          run: npm run test
    Deploy:
     needs: Testing
     runs-on: ubuntu-latest
