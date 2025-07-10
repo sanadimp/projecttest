@@ -1,5 +1,5 @@
 name: Testandbuild_Project
-on: push
+on: [push,workflow_dispatch]
 jobs:
    Linting:
     runs-on: ubuntu/latest
