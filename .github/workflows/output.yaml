@@ -1,0 +1,14 @@
+name: outputworkflow
+on:
+  issues:
+    types: [opened, edited]
+jobs:
+    Outputjob:
+     runs-on: ubuntu-latest
+     steps:
+        - name : get the code
+          uses : actions/checkout@v4
+        - name: get the complete metadata
+          run: echo ${{toJson(github)}}
+        - name: get the event 
+          run: echo ${{toJson(github.event_name)}}
