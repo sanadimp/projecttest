@@ -1,7 +1,7 @@
 name: outputworkflow
 on:
   issues:
-    types: [opened, edited]
+    
 jobs:
     Outputjob:
      runs-on: ubuntu-latest
@@ -11,4 +11,4 @@ jobs:
         - name: get the complete metadata
           run: echo "${{toJson(github)}}"
         - name: get the event 
-          run: echo "${{toJson(github.event_name)}}"
+          run: echo "${{toJson(github.event)}}"
