@@ -9,6 +9,6 @@ jobs:
         - name : get the code
           uses : actions/checkout@v4
         - name: get the complete metadata
-          run: echo ${{toJson(github)}}
+          run: echo "${{toJson(github)}}"
         - name: get the event 
-          run: echo ${{toJson(github.event_name)}}
+          run: echo "${{toJson(github.event_name)}}"
